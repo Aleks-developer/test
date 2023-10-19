@@ -1,0 +1,17 @@
+@mixin before {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    @content;
+  }
+}
+
+@mixin after {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    @content;
+  }
+}

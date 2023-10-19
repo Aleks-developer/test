@@ -1,0 +1,35 @@
+.title-anim {
+  @include laptop-small-min {
+    overflow: hidden;
+  }
+
+  & > * {
+    display: inline-flex;
+
+    @include laptop-small-min {
+      overflow: hidden;
+    }
+  }
+
+  &.aos-init {
+    & > * {
+      & > * {
+        @include laptop-small-min {
+          opacity: 0;
+          transform: translateY(35%);
+          transition: all 850ms ease-in-out;
+          transition-property: opacity, transform;
+        }
+      }
+    }
+  }
+
+  &.aos-animate {
+    & > * {
+      & > * {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}

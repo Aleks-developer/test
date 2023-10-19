@@ -1,0 +1,38 @@
+[data-aos^=fade][data-aos^=fade] {
+  transition-duration: 750ms;
+  transition-timing-function: ease-in-out;
+  transition-property: opacity, transform;
+
+  @include laptop-small-min {
+    opacity: 0;
+  }
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+[data-aos=fade-up] {
+  @include laptop-small-min {
+    transform: translate3d(0, 32px, 0);
+  }
+}
+
+[data-aos=fade-down] {
+  @include laptop-small-min {
+    transform: translate3d(0, -32px, 0);
+  }
+}
+
+[data-aos=fade-left] {
+  @include laptop-small-min {
+    transform: translate3d(32px, 0, 0);
+  }
+}
+
+[data-aos=fade-right] {
+  @include laptop-small-min {
+    transform: translate3d(-32px, 0, 0);
+  }
+}

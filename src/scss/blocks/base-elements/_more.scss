@@ -1,0 +1,99 @@
+.more {
+  &-btn {
+    display: flex;
+    align-items: center;
+    margin: 26px 0 0;
+
+    @include tablet-small-minus {
+      margin: 23px 0 0;
+    }
+
+    &--visible {
+      @include tablet-small-min {
+        display: none;
+      }
+
+      & .btn {
+        @include tablet-small-minus {
+          width: 100%;
+        }
+      }
+    }
+
+    &--center {
+      justify-content: center;
+
+      & .btn {
+        @include tablet-small-minus {
+          width: 100%;
+        }
+      }
+    }
+
+    &--full {
+      & .btn {
+        @include tablet-small-minus {
+          width: 100%;
+        }
+      }
+    }
+
+    & > * {
+      &:not(:last-child) {
+        margin-right: 26px;
+
+        @include tablet-small-minus {
+          margin-right: 23px;
+        }
+      }
+    }
+  }
+
+  &-text {
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+
+    &__link {
+      color: $standardColor;
+      cursor: pointer;
+    }
+
+    p {
+      display: inherit;
+    }
+  }
+
+  &-table {
+    &__button {
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 40px;
+
+      @include tablet-small-minus {
+        margin-top: 32px;
+      }
+
+      &--hide {
+        display: none;
+      }
+
+      &-label {
+        border-bottom: 1.5px solid currentColor;
+        color: #262629;
+        cursor: pointer;
+        padding-bottom: 8px;
+
+        &::before {
+          content: attr(data-visible-text);
+        }
+
+        &.is-open {
+          &::before {
+            content: attr(data-hide-text);
+          }
+        }
+      }
+    }
+  }
+}
