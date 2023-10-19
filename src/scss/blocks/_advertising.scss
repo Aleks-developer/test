@@ -1,0 +1,24 @@
+.main {
+  &__block-advertising {
+    padding: 60px 0 73px;
+
+    @include tablet-small-minus {
+      padding: 20px 0 44px;
+    }
+  }
+}
+
+.advertising {
+  &-wrap {
+    p {
+      font-size: 12px;
+      line-height: calc(18 / 12);
+      font-weight: 500;
+      margin-top: 13px;
+
+      @include tablet-small-minus {
+        margin-top: 18px;
+      }
+    }
+  }
+}

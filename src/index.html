@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+@include('partials/head.html')
+<body class="page__body loading">
+<!-- @include('partials/preloader.html') -->
+<div class="site-container">
+  @include('partials/header.html')
+  <main class="main">
+    <div class="page-wrapper">
+      <div class="section main__block-path">
+        <div class="container">
+          <h1>Путь JavaScript</h1>
+          <div class="path-news">
+            <div class="path-news__img">
+              <span class="path-news__arrow"></span>
+              <div class="path-news__img-inner">
+                <div class="path-news__event">
+                  <div class="path-news__event-inner">
+                    <span class="path-news__event-day">12<span class="path-news__event-arrow"></span></span>
+                    <span class="path-news__event-month">Апреля</span>
+                  </div>
+                </div>
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="img/content/path/books.jpg"
+                />
+              </div>
+            </div>
+            <p>Можно выделить три основных направления для прогресса JavaScript</p>
+          </div>
+          <div class="path-blockquote">
+            <article>
+              <h3>Серверный JavaScript</h3>
+              <blockquote class="blockquote">
+                <span class="blockquote__quote">
+                  @include('partials/svg/quote.svg')
+                </span>
+                <div class="blockquote__text">Разработчики и клиенты часто неправильно понимают, что такое система. Они видят графический интерфейс и думают, что он и есть система. Они определяют систему в терминах графического интерфейса и считают, что должны сразу начать работу с графическим интерфейсом. Они не понимают важнейшего принципа: ввод/вывод не важен.</div>
+                <span class="blockquote__author">— Р. Мартин</span>
+              </blockquote>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="section main__block-advertising main__block-bg">
+        <div class="container">
+          <div class="advertising-wrap">
+            <div class="advertising-wrap__img">
+              <picture>
+                <source media="(max-width:767px)" srcset="img/content/advertising/books-mob.jpg">
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="img/content/advertising/books.jpg"
+                />
+              </picture>
+            </div>
+            <p>Реклама на <a href="#">blabla.com</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="section main__block-article">
+        <div class="container">
+          <article>
+            <h3>Заключение</h3>
+            <p>Синхрония осознаёт сюжетный верлибр. Мифопорождающее текстовое устройство диссонирует лирический субъект. Абстрактное высказывание пространственно просветляет деструктивный символ. Ямб, несмотря на то, что все эти характерологические черты отсылают не к единому образу нарратора, интегрирует мифопоэтический хронотоп. Действительно, ударение приводит палимпсест. Контрапункт приводит ритм.</p>
+          </article>
+        </div>
+      </div>
+      <div class="section main__block-form main__block-bg">
+        <div class="container">
+          <h2>Что вы думаете об этой книге?</h2>
+          <div class="form-blocks">
+            <div class="form-block">
+              <span class="form-block__label">Оцените статью</span>
+              <div class="form-rating">
+                <div class="rating">
+                  <span class="rating__count">4</span>
+                  <div class="rating-stars">
+                    <div class="rating-star">
+                      <input type="checkbox" name="ratingCheck" checked>
+                      @include('partials/svg/star.svg')
+                    </div>
+                    <div class="rating-star">
+                      <input type="checkbox" name="ratingCheck" checked>
+                      @include('partials/svg/star.svg')
+                    </div>
+                    <div class="rating-star">
+                      <input type="checkbox" name="ratingCheck" checked>
+                      @include('partials/svg/star.svg')
+                    </div>
+                    <div class="rating-star">
+                      <input type="checkbox" name="ratingCheck" checked>
+                      @include('partials/svg/star.svg')
+                    </div>
+                    <div class="rating-star">
+                      <input type="checkbox" name="ratingCheck">
+                      @include('partials/svg/star.svg')
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-block">
+              <span class="form-block__label">Добавить комментарий к книге</span>
+              <form action="/" method="post" name="reviewForm" class="form-block__inputs form">
+                <div class="form-inputs form-inputs--grid">
+                  <div class="form-input form-input--w4">
+                    <input class="form-control" placeholder="" id="reviewFormName" name="name">
+                    <label class="form-input__label" for="reviewFormName">
+                      <span>Имя</span>
+                    </label>
+                  </div>
+                  <div class="form-input form-input--w4">
+                    <input class="form-control" placeholder="" id="reviewFormEmail" name="email">
+                    <label class="form-input__label" for="reviewFormEmail">
+                      <span>Email</span>
+                    </label>
+                  </div>
+                  <div class="form-input form-input--w4">
+                    <select id="selectForm">
+                      <option data-placeholder="true"></option>
+                      <option value="JavaScript ниндзя">JavaScript ниндзя</option>
+                      <option value="Pragmatic Guide to JavaScript">Pragmatic Guide to JavaScript</option>
+                      <option value="Pro JavaScript Techniques">Pro JavaScript Techniques</option>
+                      <option value="Выразительный JavaScript">Выразительный JavaScript</option>
+                    </select>
+                  </div>
+                  <div class="form-input">
+                    <textarea rows="6" name="text" id="reviewFormText" class="form-control"></textarea>
+                    <label class="form-input__label" for="reviewFormText">
+                      <span>Ваш отзыв</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-btn">
+                  <button class="btn btn-blue btn--stroke btn--big radius">
+                    <span class="btn__text">Отправить</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section main__block-news">
+        <div class="container">
+          <h2>Похожие посты</h2>
+          <div class="news-items">
+            <div class="swiper js-news-slider">
+              <div class="news-items__row swiper-wrapper">
+                <div class="news-items__col swiper-slide">
+                  <a href="#" class="news-item">
+                    <div class="news-item__img">
+                      <div class="img">
+                        <div class="img__inner object-fit">
+                          <img
+                            alt=""
+                            loading="lazy"
+                            src="img/content/news/img-1.jpg"
+                            class="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="news-item__content">
+                      <time datetime="12 декабря">12 декабря</time>
+                      <h4>События жизненного цикла ReactJS</h4>
+                    </div>
+                  </a>
+                </div>
+                <div class="news-items__col swiper-slide">
+                  <a href="#" class="news-item">
+                    <div class="news-item__img">
+                      <div class="img">
+                        <div class="img__inner object-fit">
+                          <img
+                            alt=""
+                            loading="lazy"
+                            src="img/content/news/img-2.jpg"
+                            class="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="news-item__content">
+                      <time datetime="10 декабря">10 декабря</time>
+                      <h4>CSS Grids. Полное руководство</h4>
+                    </div>
+                  </a>
+                </div>
+                <div class="news-items__col swiper-slide">
+                  <a href="#" class="news-item">
+                    <div class="news-item__img">
+                      <div class="img">
+                        <div class="img__inner object-fit">
+                          <img
+                            alt=""
+                            loading="lazy"
+                            src="img/content/news/img-3.jpg"
+                            class="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="news-item__content">
+                      <time datetime="5 декабря">5 декабря</time>
+                      <h4>Асинхронность в JavaScript</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="news-slider__bottom">
+              <div class="news-slider__bottom-inner">
+                <div class="news-slider__pagination slider-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  @include('partials/modals.html')
+  <!-- @include('html/h1.html') пример include -->
+</div>
+</body>
+</html>

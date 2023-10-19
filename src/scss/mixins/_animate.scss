@@ -1,0 +1,7 @@
+@mixin base-animate-hover {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin base-transition {
+  transition: all 0.3s ease-in-out;
+}
