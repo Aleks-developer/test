@@ -1,9 +1,0 @@
-.main {
-  &__block-article {
-    padding: 50px 0 80px;
-
-    @include tablet-small-minus {
-      padding: 30px 0 50px;
-    }
-  }
-}
